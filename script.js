@@ -1,13 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    
+    // --- Mobile Menu Toggle ---
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // --- Smooth Scrolling & Active State Update ---
+    const navItems = document.querySelectorAll('.nav-links a');
+    
+    navItems.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             
-            // Close mobile menu if open
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
             }
+
+            // Remove active from all
+            navItems.forEach(item => item.classList.remove('active'));
+            // Add active to clicked
+            this.classList.add('active');
 
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
@@ -21,70 +38,107 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile menu toggle
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (mobileMenu) {
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
-
-    // Typing effect for the hero section
-    const typingElement = document.querySelector('.typing-text');
-    if (typingElement) {
-        const textToType = "Software Developer & AI Enthusiast";
-        typingElement.textContent = '';
-        let i = 0;
-        
-        function typeWriter() {
-            if (i < textToType.length) {
-                typingElement.textContent += textToType.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        }
-        
-        // Start typing effect after a small delay
-        setTimeout(typeWriter, 500);
-    }
-
-    // Navbar scroll effect (add background when scrolling down)
-    const navbar = document.querySelector('.navbar');
+    // Update active nav link on scroll
     window.addEventListener('scroll', () => {
+        let current = '';
+        const sections = document.querySelectorAll('section');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${current}`) {
+                item.classList.add('active');
+            }
+        });
+        
+        // Header scroll shadow
+        const header = document.getElementById('header');
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+            header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
+            header.style.padding = '10px 0';
         } else {
-            navbar.style.background = 'rgba(15, 23, 42, 0.8)';
-            navbar.style.boxShadow = 'none';
+            header.style.boxShadow = 'none';
+            header.style.padding = '0'; // Will default to css padding
         }
     });
 
-    // Add simple reveal animation for sections
-    const sections = document.querySelectorAll('.section');
+
+    // --- Typing Effect ---
+    const typedElement = document.querySelector('.typed');
+    if (typedElement) {
+        const typedItems = typedElement.getAttribute('data-typed-items').split(',');
+        let itemIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function type() {
+            const currentItem = typedItems[itemIndex].trim();
+            
+            if (isDeleting) {
+                typedElement.textContent = currentItem.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedElement.textContent = currentItem.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            let typingSpeed = isDeleting ? 50 : 100;
+            
+            if (!isDeleting && charIndex === currentItem.length) {
+                // Pause at the end of word
+                typingSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                itemIndex = (itemIndex + 1) % typedItems.length;
+                typingSpeed = 500; // Pause before typing next word
+            }
+            
+            setTimeout(type, typingSpeed);
+        }
+        
+        setTimeout(type, 1000);
+    }
+
+
+    // --- Scroll Animations (Custom AOS) ---
+    const animateElements = document.querySelectorAll('[data-aos]');
     
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
+        rootMargin: '0px 0px -100px 0px',
         threshold: 0.1
     };
 
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
+                // Add delay if specified
+                const delay = entry.target.getAttribute('data-aos-delay');
+                if (delay) {
+                    entry.target.style.transitionDelay = `${delay}ms`;
+                }
+                
+                entry.target.classList.add('aos-animate');
+                // Optional: unobserve if we only want it to animate once
+                // observer.unobserve(entry.target); 
+            } else {
+                // Remove class when out of view so it animates again when scrolling back up
+                entry.target.classList.remove('aos-animate');
+                entry.target.style.transitionDelay = '0ms'; // reset delay
             }
         });
     }, observerOptions);
 
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        sectionObserver.observe(section);
+    animateElements.forEach(el => {
+        scrollObserver.observe(el);
     });
+
 });
