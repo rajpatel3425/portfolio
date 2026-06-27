@@ -38,7 +38,7 @@
         async function fetchMessages() {
             const container = document.getElementById('messages-container');
             try {
-                const response = await fetch('/api/messages');
+                const response = await fetch('https://portfolio-ijxt.onrender.com/api/messages');
                 const messages = await response.json();
 
                 if (messages.length === 0) {
