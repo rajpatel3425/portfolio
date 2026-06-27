@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raj Patel's personal portfolio website showcasing software development projects, skills, and certifications.">
+    <title>Raj Patel | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#home" class="logo">RP.</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Raj Patel</span></h1>
+                    <h2 class="typing-text">Software Developer & AI Enthusiast</h2>
+                    <p>Computer Science student at GLA University, passionate about building intelligent applications and solving complex problems.</p>
+                    <div class="hero-actions">
+                        <a href="assets/documents/raj_patel_resume.pdf" download class="btn primary-btn">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/raj-patel-6b24b42b9/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/rajpatel3425" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://leetcode.com/u/raj_patel18/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+                            <a href="https://x.com/RajPatel_sde" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://www.instagram.com/rajpatel11__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="image-wrapper">
+                        <img src="assets\images\portfolio image.jpeg" alt="Raj Patel" class="hero-image" onerror="this.src='https://via.placeholder.com/400x400?text=Profile+Image';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Technology in Computer Science</h3>
+                        <h4>GLA University, Mathura</h4>
+                        <span class="date">June 2027</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Intermediate</h3>
+                        <h4>Jingle Bells Public School, Bareilly</h4>
+                        <span class="date">May 2023</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>High School</h3>
+                        <h4>Jingle Bells Public School, Bareilly</h4>
+                        <span class="date">May 2021</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming</h3>
+                    <p>Python, Java, DSA, HTML, CSS, JavaScript, Node.js</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Database Systems</h3>
+                    <p>MySQL, MongoDB</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>Deployment Tools</h3>
+                    <p>Git, GitHub, Netlify</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-users"></i></div>
+                    <h3>Soft Skills</h3>
+                    <p>Effective Communication, Team Collaboration, Leadership, Quick Learner</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section dark-bg">
+            <h2 class="section-title">Experience & Training</h2>
+            <div class="experience-card">
+                <div class="exp-header">
+                    <h3>Generative AI (Gen AI) Course</h3>
+                    <span class="date">June 2025 - July 2025</span>
+                </div>
+                <h4>GLA University, Mathura - <em>Trainee</em></h4>
+                <ul class="exp-list">
+                    <li>Successfully completed a Value-Added Course in Generative AI organized by the Department of Computer Engineering & Applications (CEA), GLA University.</li>
+                    <li>Learned fundamentals of Artificial Intelligence, Generative AI, Large Language Models (LLMs), and AI-powered applications.</li>
+                    <li>Gain exposure to AI tools, prompt engineering concepts, and practical applications of Gen AI technologies.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>AI Logo and Poster Generator</h3>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <div class="project-tools">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span>
+                        </div>
+                        <ul class="project-list">
+                            <li>Developed an AI-powered web application for generating logos and event posters based on user-defined inputs, including event name, theme, and color preferences.</li>
+                            <li>Integrated AI APIs for automated image generation and implemented functionalities such as template selection and color customization.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://unilogosgen.netlify.app/" target="_blank" class="btn secondary-btn">
+                                <i class="fas fa-external-link-alt"></i> Live Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Day-to-Day Task Management</h3>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <div class="project-tools">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <ul class="project-list">
+                            <li>Developed a responsive To-Do List application with task creation, status tracking, and an intuitive user interface for efficient daily task management.</li>
+                            <li>Designed a clean and user-friendly interface to enhance user experience and task management efficiency.</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://day-to-day-task.netlify.app/" class="btn secondary-btn">
+                                <i class="fas fa-code"></i> Live Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <img src="assets\images\certificate (1).jpeg" alt="JPMorgan Chase & Co. Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=JPMorgan+Cert';">
+                    <div class="cert-info">
+                        <h4>Software Engineering Job Simulation</h4>
+                        <p>JPMorgan Chase & Co. (Forage)</p>
+                        <a href="assets\images\certificate (1).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <img src="assets\images\certificate (2).jpeg" alt="HackerRank Problem Solving Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=HackerRank+Problem+Solving';">
+                    <div class="cert-info">
+                        <h4>Problem Solving (Basic)</h4>
+                        <p>HackerRank</p>
+                        <a href="assets\images\certificate (2).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <img src="assets\images\certificate (3).jpeg" alt="UniAthena Basics of Python Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=UniAthena+Python';">
+                    <div class="cert-info">
+                        <h4>Basics of Python</h4>
+                        <p>UniAthena</p>
+                        <a href="assets\images\certificate (3).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <img src="assets\images\certificate (4).jpeg" alt="HackerRank SQL Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=HackerRank+SQL';">
+                    <div class="cert-info">
+                        <h4>SQL (Basic)</h4>
+                        <p>HackerRank</p>
+                        <a href="assets\images\certificate (4).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <img src="assets\images\certificate (5).jpeg" alt="NPTEL Leadership Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=NPTEL+Leadership';">
+                    <div class="cert-info">
+                        <h4>Leadership and Team Effectiveness</h4>
+                        <p>NPTEL Online Certification</p>
+                        <a href="assets\images\certificate (5).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <img src="assets\images\certificate (6).jpeg" alt="TCS iON AI for All Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=TCS+iON+AI';">
+                    <div class="cert-info">
+                        <h4>AI for All (AI and Cybersecurity)</h4>
+                        <p>TCS iON</p>
+                        <a href="assets\images\certificate (6).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <img src="assets\images\certificate (7).jpeg" alt="Deloitte Data Analytics Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Deloitte+Data+Analytics';">
+                    <div class="cert-info">
+                        <h4>Data Analytics Job Simulation</h4>
+                        <p>Deloitte (Forage)</p>
+                        <a href="assets\images\certificate (7).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <img src="assets\images\certificate (8).jpeg" alt="GLA Gen AI Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=GLA+Gen+AI';">
+                    <div class="cert-info">
+                        <h4>Gen AI Course</h4>
+                        <p>GLA University & Coding Blocks</p>
+                        <a href="assets\images\certificate (8).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Raj Patel. All rights reserved.</p>
+            <div class="footer-contact">
+                <a href="mailto:rp317976@gmail.com"><i class="fas fa-envelope"></i> rp317976@gmail.com</a>
+                <a href="tel:+916395734921"><i class="fas fa-phone"></i> +91 63957 34921</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
