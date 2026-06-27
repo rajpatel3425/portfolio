@@ -1,0 +1,26 @@
+{
+  "name": "potfolio",
+  "version": "1.0.0",
+  "description": "💼 Personal portfolio website built with HTML, CSS, and JavaScript to showcase my projects, technical skills, certifications, and software development journey.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajpatel3425/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rajpatel3425/portfolio/issues"
+  },
+  "homepage": "https://github.com/rajpatel3425/portfolio#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
+  }
+}
