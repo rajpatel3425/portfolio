@@ -4,111 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Raj Patel's personal portfolio website showcasing software development projects, skills, and certifications.">
-    <title>Raj Patel | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Raj Patel | Software Developer</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="#home" class="logo">RP.</a>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-            </ul>
-        </div>
-    </nav>
+<body class="index-page">
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Hi, I'm <span class="highlight">Raj Patel</span></h1>
-                    <h2 class="typing-text">Software Developer & AI Enthusiast</h2>
-                    <p>Computer Science student at GLA University, passionate about building intelligent applications and solving complex problems.</p>
-                    <div class="hero-actions">
-                        <a href="assets/documents/raj_patel_resume.pdf" download class="btn primary-btn">
-                            <i class="fas fa-download"></i> Download Resume
-                        </a>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/raj-patel-6b24b42b9/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/rajpatel3425" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://leetcode.com/u/raj_patel18/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
-                            <a href="https://x.com/RajPatel_sde" target="_blank" aria-label="X"><i class="fab fa-x"></i></a>
-                            <a href="https://www.instagram.com/rajpatel11__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+    <!-- Header / Navbar -->
+    <header id="header" class="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <h1 class="sitename">Raj Patel</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
                 </div>
-                <div class="hero-image-container">
-                    <div class="image-wrapper">
-                        <img src="assets\images\portfolio image.jpeg" alt="Raj Patel" class="hero-image" onerror="this.src='https://via.placeholder.com/400x400?text=Profile+Image';">
+            </nav>
+            <a class="btn-getstarted" href="#about">Get Started</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+            <div class="hero-bg"></div>
+            <div class="container hero-container" data-aos="fade-up">
+                <div class="hero-content text-center">
+                    <h1>Hi, I'm Raj Patel</h1>
+                    <p>I'm a <span class="typed" data-typed-items="Computer Science Student, Software Developer, AI Enthusiast, Problem Solver"></span><span class="cursor">|</span></p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/raj-patel-6b24b42b9/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/rajpatel3425" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://leetcode.com/u/raj_patel18/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+                        <a href="https://x.com/RajPatel_sde" target="_blank" aria-label="X "><i class="fab fa-x"></i></a>
+                        <a href="https://www.instagram.com/rajpatel11__" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education" class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Technology in Computer Science</h3>
-                        <h4>GLA University, Mathura</h4>
-                        <span class="date">June 2027</span>
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container section-title text-center" data-aos="fade-up">
+                <span class="subtitle">About Me</span>
+                <h2>Who Am I?</h2>
+                <p>I am Raj Patel, a B.Tech Computer Science & Engineering student at GLA University, Mathura. I am passionate about building intelligent applications and solving complex problems.</p>
+            </div>
+
+            <div class="container about-grid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Profile Card (Left) -->
+                <div class="profile-card" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="assets/images/portfolio image.jpeg" alt="Raj Patel" onerror="this.src='https://via.placeholder.com/150x150?text=Profile';">
+                            <div class="status-indicator"></div>
+                        </div>
+                        <h3>Raj Patel</h3>
+                        <span class="role">B.Tech CSE Student | Software Developer</span>
+                        <div class="profile-badges">
+                            <span class="badge">Python</span>
+                            <span class="badge">Java</span>
+                            <span class="badge">DSA</span>
+                            <span class="badge">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <h4>2+</h4>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>8</h4>
+                            <p>Certifications</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-actions">
+                        <a href="assets/documents/raj_patel_resume.pdf" class="btn-primary" download>
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <i class="fas fa-envelope"></i> Contact Me
+                        </a>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Intermediate</h3>
-                        <h4>Jingle Bells Public School, Bareilly</h4>
-                        <span class="date">May 2023</span>
+
+                <!-- Education Details (Right) -->
+                <div class="about-details" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="details-title">Education Journey</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Bachelor of Technology in Computer Science</h3>
+                                <h4>GLA University, Mathura</h4>
+                                <span class="date">June 2027</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>Intermediate</h3>
+                                <h4>Jingle Bells Public School, Bareilly</h4>
+                                <span class="date">May 2023</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>High School</h3>
+                                <h4>Jingle Bells Public School, Bareilly</h4>
+                                <span class="date">May 2021</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>High School</h3>
-                        <h4>Jingle Bells Public School, Bareilly</h4>
-                        <span class="date">May 2021</span>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section light-background">
+            <div class="container section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Experience</span>
+                <h2>Training & Experience</h2>
+            </div>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="experience-card card-style">
+                    <div class="exp-header">
+                        <h3>Generative AI (Gen AI) Course</h3>
+                        <span class="date-badge">June 2025 - July 2025</span>
                     </div>
+                    <h4>GLA University, Mathura - <em>Trainee</em></h4>
+                    <ul class="exp-list">
+                        <li>Successfully completed a Value-Added Course in Generative AI organized by the Department of Computer Engineering & Applications (CEA), GLA University.</li>
+                        <li>Learned fundamentals of Artificial Intelligence, Generative AI, Large Language Models (LLMs), and AI-powered applications.</li>
+                        <li>Gain exposure to AI tools, prompt engineering concepts, and practical applications of Gen AI technologies.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="section">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
+        <section id="skills" class="skills section">
+            <div class="container section-title text-center" data-aos="fade-up">
+                <span class="subtitle">My Skills</span>
+                <h2>Technical & Soft Skills</h2>
+            </div>
+            <div class="container skills-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-card card-style">
                     <div class="skill-icon"><i class="fas fa-code"></i></div>
                     <h3>Programming</h3>
                     <p>Python, Java, DSA, HTML, CSS, JavaScript, Node.js</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card card-style">
                     <div class="skill-icon"><i class="fas fa-database"></i></div>
                     <h3>Database Systems</h3>
                     <p>MySQL, MongoDB</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card card-style">
                     <div class="skill-icon"><i class="fas fa-server"></i></div>
                     <h3>Deployment Tools</h3>
                     <p>Git, GitHub, Netlify</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card card-style">
                     <div class="skill-icon"><i class="fas fa-users"></i></div>
                     <h3>Soft Skills</h3>
                     <p>Effective Communication, Team Collaboration, Leadership, Quick Learner</p>
@@ -116,29 +194,15 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section dark-bg">
-            <h2 class="section-title">Experience & Training</h2>
-            <div class="experience-card">
-                <div class="exp-header">
-                    <h3>Generative AI (Gen AI) Course</h3>
-                    <span class="date">June 2025 - July 2025</span>
-                </div>
-                <h4>GLA University, Mathura - <em>Trainee</em></h4>
-                <ul class="exp-list">
-                    <li>Successfully completed a Value-Added Course in Generative AI organized by the Department of Computer Engineering & Applications (CEA), GLA University.</li>
-                    <li>Learned fundamentals of Artificial Intelligence, Generative AI, Large Language Models (LLMs), and AI-powered applications.</li>
-                    <li>Gain exposure to AI tools, prompt engineering concepts, and practical applications of Gen AI technologies.</li>
-                </ul>
-            </div>
-        </section>
-
         <!-- Projects Section -->
-        <section id="projects" class="section">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
+        <section id="projects" class="projects section light-background">
+            <div class="container section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Portfolio</span>
+                <h2>Recent Projects</h2>
+            </div>
+            <div class="container projects-grid" data-aos="fade-up" data-aos-delay="100">
                 <!-- Project 1 -->
-                <div class="project-card">
+                <div class="project-card card-style">
                     <div class="project-content">
                         <div class="project-header">
                             <h3>AI Logo and Poster Generator</h3>
@@ -151,8 +215,8 @@
                             <li>Developed an AI-powered web application for generating logos and event posters based on user-defined inputs, including event name, theme, and color preferences.</li>
                             <li>Integrated AI APIs for automated image generation and implemented functionalities such as template selection and color customization.</li>
                         </ul>
-                        <div class="project-links">
-                            <a href="https://unilogosgen.netlify.app/" target="_blank" class="btn secondary-btn">
+                        <div class="project-links mt-auto">
+                            <a href="https://unilogosgen.netlify.app/" target="_blank" class="btn-sm-primary">
                                 <i class="fas fa-external-link-alt"></i> Live Project
                             </a>
                         </div>
@@ -160,7 +224,7 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card">
+                <div class="project-card card-style">
                     <div class="project-content">
                         <div class="project-header">
                             <h3>Day-to-Day Task Management</h3>
@@ -173,8 +237,8 @@
                             <li>Developed a responsive To-Do List application with task creation, status tracking, and an intuitive user interface for efficient daily task management.</li>
                             <li>Designed a clean and user-friendly interface to enhance user experience and task management efficiency.</li>
                         </ul>
-                        <div class="project-links">
-                            <a href="https://day-to-day-task.netlify.app/" class="btn secondary-btn">
+                        <div class="project-links mt-auto">
+                            <a href="https://day-to-day-task.netlify.app/" target="_blank" class="btn-sm-primary">
                                 <i class="fas fa-code"></i> Live Project
                             </a>
                         </div>
@@ -184,83 +248,149 @@
         </section>
 
         <!-- Certifications Section -->
-        <section id="certifications" class="section">
-            <h2 class="section-title">Certifications</h2>
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <img src="assets\images\certificate (1).jpeg" alt="JPMorgan Chase & Co. Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=JPMorgan+Cert';">
+        <section id="certifications" class="certifications section">
+            <div class="container section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Achievements</span>
+                <h2>Certifications</h2>
+            </div>
+            <div class="container cert-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-card card-style">
+                    <img src="assets/images/jpmorgan_cert.jpg" alt="JPMorgan Chase & Co. Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=JPMorgan+Cert';">
                     <div class="cert-info">
                         <h4>Software Engineering Job Simulation</h4>
                         <p>JPMorgan Chase & Co. (Forage)</p>
-                        <a href="assets\images\certificate (1).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                        <a href="assets/images/jpmorgan_cert.jpg" target="_blank" class="btn-sm-secondary mt-auto">View <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="cert-card">
-                    <img src="assets\images\certificate (2).jpeg" alt="HackerRank Problem Solving Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=HackerRank+Problem+Solving';">
+                <div class="cert-card card-style">
+                    <img src="assets/images/hackerrank_problem_cert.jpg" alt="HackerRank Problem Solving Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=HackerRank+Problem+Solving';">
                     <div class="cert-info">
                         <h4>Problem Solving (Basic)</h4>
                         <p>HackerRank</p>
-                        <a href="assets\images\certificate (2).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                        <a href="assets/images/hackerrank_problem_cert.jpg" target="_blank" class="btn-sm-secondary mt-auto">View <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="cert-card">
-                    <img src="assets\images\certificate (3).jpeg" alt="UniAthena Basics of Python Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=UniAthena+Python';">
+                <div class="cert-card card-style">
+                    <img src="assets/images/uniathena_cert.jpg" alt="UniAthena Basics of Python Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=UniAthena+Python';">
                     <div class="cert-info">
                         <h4>Basics of Python</h4>
                         <p>UniAthena</p>
-                        <a href="assets\images\certificate (3).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                        <a href="assets/images/uniathena_cert.jpg" target="_blank" class="btn-sm-secondary mt-auto">View <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="cert-card">
-                    <img src="assets\images\certificate (4).jpeg" alt="HackerRank SQL Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=HackerRank+SQL';">
+                <div class="cert-card card-style">
+                    <img src="assets/images/hackerrank_sql_cert.jpg" alt="HackerRank SQL Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=HackerRank+SQL';">
                     <div class="cert-info">
                         <h4>SQL (Basic)</h4>
                         <p>HackerRank</p>
-                        <a href="assets\images\certificate (4).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                        <a href="assets/images/hackerrank_sql_cert.jpg" target="_blank" class="btn-sm-secondary mt-auto">View <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="cert-card">
-                    <img src="assets\images\certificate (5).jpeg" alt="NPTEL Leadership Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=NPTEL+Leadership';">
+                <div class="cert-card card-style">
+                    <img src="assets/images/nptel_cert.jpg" alt="NPTEL Leadership Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=NPTEL+Leadership';">
                     <div class="cert-info">
                         <h4>Leadership and Team Effectiveness</h4>
                         <p>NPTEL Online Certification</p>
-                        <a href="assets\images\certificate (5).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                        <a href="assets/images/nptel_cert.jpg" target="_blank" class="btn-sm-secondary mt-auto">View <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="cert-card">
-                    <img src="assets\images\certificate (6).jpeg" alt="TCS iON AI for All Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=TCS+iON+AI';">
+                <div class="cert-card card-style">
+                    <img src="assets/images/tcs_ion_cert.jpg" alt="TCS iON AI for All Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=TCS+iON+AI';">
                     <div class="cert-info">
                         <h4>AI for All (AI and Cybersecurity)</h4>
                         <p>TCS iON</p>
-                        <a href="assets\images\certificate (6).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                        <a href="assets/images/tcs_ion_cert.jpg" target="_blank" class="btn-sm-secondary mt-auto">View <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="cert-card">
-                    <img src="assets\images\certificate (7).jpeg" alt="Deloitte Data Analytics Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Deloitte+Data+Analytics';">
+                <div class="cert-card card-style">
+                    <img src="assets/images/deloitte_cert.jpg" alt="Deloitte Data Analytics Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=Deloitte+Data+Analytics';">
                     <div class="cert-info">
                         <h4>Data Analytics Job Simulation</h4>
                         <p>Deloitte (Forage)</p>
-                        <a href="assets\images\certificate (7).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                        <a href="assets/images/deloitte_cert.jpg" target="_blank" class="btn-sm-secondary mt-auto">View <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="cert-card">
-                    <img src="assets\images\certificate (8).jpeg" alt="GLA Gen AI Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=GLA+Gen+AI';">
+                <div class="cert-card card-style">
+                    <img src="assets/images/genai_cert.jpg" alt="GLA Gen AI Certificate" loading="lazy" onerror="this.src='https://via.placeholder.com/300x200?text=GLA+Gen+AI';">
                     <div class="cert-info">
                         <h4>Gen AI Course</h4>
                         <p>GLA University & Coding Blocks</p>
-                        <a href="assets\images\certificate (8).jpeg" target="_blank" class="btn secondary-btn view-cert-btn">View <i class="fas fa-external-link-alt"></i></a>
+                        <a href="assets/images/genai_cert.jpg" target="_blank" class="btn-sm-secondary mt-auto">View <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section light-background">
+            <div class="container section-title text-center" data-aos="fade-up">
+                <span class="subtitle">Get In Touch</span>
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out to me for any collaborations, opportunities, or just to say hi!</p>
+            </div>
+            
+            <div class="container contact-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="info-wrap card-style">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Mathura, Uttar Pradesh, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:rp317976@gmail.com">rp317976@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call</h3>
+                            <p><a href="tel:+916395734921">+91 63957 34921</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-wrap card-style">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully! (This is a visual demo)');">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Raj Patel. All rights reserved.</p>
-            <div class="footer-contact">
-                <a href="mailto:rp317976@gmail.com"><i class="fas fa-envelope"></i> rp317976@gmail.com</a>
-                <a href="tel:+916395734921"><i class="fas fa-phone"></i> +91 63957 34921</a>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; 2026 <strong><span>Raj Patel</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed with <i class="fas fa-heart" style="color: #e25555;"></i>
             </div>
         </div>
     </footer>
